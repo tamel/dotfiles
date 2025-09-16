@@ -1,0 +1,39 @@
+return {
+  "stevearc/overseer.nvim",
+  lazy = false,
+  keys = {
+    { "<leader>ovt", "<cmd>OverseerToggle!<CR>", desc = "Overseer: Toggle" },
+    { "<leader>ovr", "<cmd>OverseerRun<CR>",     desc = "Overseer: Run" },
+  },
+  opts = {
+    dap = false,
+    task_list = {
+      direction = "right",
+
+      bindings = {
+        ["?"] = "ShowHelp",
+        ["<CR>"] = "RunAction",
+        ["<C-e>"] = "Edit",
+        ["o"] = "Open",
+        ["<C-v>"] = "OpenVsplit",
+        ["<C-s>"] = "OpenSplit",
+        ["<C-f>"] = "OpenFloat",
+        ["<C-q>"] = "OpenQuickFix",
+        ["p"] = "TogglePreview",
+        ["l"] = "IncreaseDetail",
+        ["h"] = "DecreaseDetail",
+        -- ["L"] = "IncreaseAllDetail",
+        -- ["H"] = "DecreaseAllDetail",
+        ["ä"] = "PrevTask",
+        ["ö"] = "NextTask",
+        ["K"] = "ScrollOutputUp",
+        ["J"] = "ScrollOutputDown",
+        ["q"] = "Close",
+      },
+    },
+    strategy = {
+      "toggleterm",
+      use_shell = true,
+    }
+  },
+}
