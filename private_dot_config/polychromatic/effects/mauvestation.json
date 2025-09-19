@@ -1,0 +1,65 @@
+{
+    "name": "mauve-station",
+    "type": 3,
+    "author": "",
+    "icon": "img/effects/sequence.svg",
+    "summary": "",
+    "map_device": "Razer Base Station Chroma",
+    "map_device_icon": "stand",
+    "map_graphic": "base_station_chroma.svg",
+    "map_cols": 15,
+    "map_rows": 1,
+    "save_format": 8,
+    "revision": 1,
+    "fps": 10,
+    "loop": true,
+    "frames": [
+        {
+            "0": {
+                "0": "#aa00ff"
+            },
+            "1": {
+                "0": "#cba6f7"
+            },
+            "2": {
+                "0": "#cba6f7"
+            },
+            "3": {
+                "0": "#cba6f7"
+            },
+            "4": {
+                "0": "#ff00ff"
+            },
+            "5": {
+                "0": "#aa00ff"
+            },
+            "6": {
+                "0": "#cba6f7"
+            },
+            "7": {
+                "0": "#aa00ff"
+            },
+            "8": {
+                "0": "#cba6f7"
+            },
+            "9": {
+                "0": "#aa00ff"
+            },
+            "10": {
+                "0": "#ff00ff"
+            },
+            "11": {
+                "0": "#cba6f7"
+            },
+            "12": {
+                "0": "#cba6f7"
+            },
+            "13": {
+                "0": "#cba6f7"
+            },
+            "14": {
+                "0": "#aa00ff"
+            }
+        }
+    ]
+}

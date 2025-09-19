@@ -1,0 +1,80 @@
+{
+    "name": "mauve-mouse",
+    "type": 3,
+    "author": "",
+    "icon": "img/effects/sequence.svg",
+    "summary": "",
+    "map_device": "Razer Mamba Elite",
+    "map_device_icon": "mouse",
+    "map_graphic": "mamba_elite.svg",
+    "map_cols": 20,
+    "map_rows": 1,
+    "save_format": 8,
+    "revision": 1,
+    "fps": 10,
+    "loop": true,
+    "frames": [
+        {
+            "0": {
+                "0": "#cba6f7"
+            },
+            "1": {
+                "0": "#cba6f7"
+            },
+            "2": {
+                "0": "#cba6f7"
+            },
+            "3": {
+                "0": "#cba6f7"
+            },
+            "4": {
+                "0": "#aa00ff"
+            },
+            "5": {
+                "0": "#aa00ff"
+            },
+            "6": {
+                "0": "#cba6f7"
+            },
+            "7": {
+                "0": "#cba6f7"
+            },
+            "8": {
+                "0": "#aa00ff"
+            },
+            "9": {
+                "0": "#ff00ff"
+            },
+            "10": {
+                "0": "#cba6f7"
+            },
+            "11": {
+                "0": "#cba6f7"
+            },
+            "12": {
+                "0": "#cba6f7"
+            },
+            "13": {
+                "0": "#aa00ff"
+            },
+            "14": {
+                "0": "#aa00ff"
+            },
+            "15": {
+                "0": "#cba6f7"
+            },
+            "16": {
+                "0": "#cba6f7"
+            },
+            "17": {
+                "0": "#aa00ff"
+            },
+            "18": {
+                "0": "#ff00ff"
+            },
+            "19": {
+                "0": "#cba6f7"
+            }
+        }
+    ]
+}

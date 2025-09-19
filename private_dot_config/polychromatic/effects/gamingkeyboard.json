@@ -1,0 +1,88 @@
+{
+    "name": "gaming-keyboard",
+    "type": 3,
+    "author": "",
+    "icon": "img/effects/sequence.svg",
+    "summary": "",
+    "map_device": "Razer Ornata V2",
+    "map_device_icon": "keyboard",
+    "map_graphic": "ornata_v2_us.svg",
+    "map_cols": 22,
+    "map_rows": 6,
+    "save_format": 8,
+    "revision": 1,
+    "fps": 10,
+    "loop": true,
+    "frames": [
+        {
+            "0": {},
+            "1": {
+                "4": "#ffff00",
+                "2": "#ffff00",
+                "5": "#ffffff",
+                "3": "#ffff00",
+                "1": "#ffff00"
+            },
+            "2": {
+                "1": "#0000ff",
+                "2": "#0000ff",
+                "3": "#ff4cff",
+                "4": "#ffff00"
+            },
+            "3": {
+                "1": "#0000ff",
+                "2": "#ff4cff",
+                "3": "#ff4cff",
+                "4": "#ffff00"
+            },
+            "4": {
+                "1": "#0000ff",
+                "3": "#ff4cff",
+                "2": "#0000ff",
+                "4": "#ffff00"
+            },
+            "5": {
+                "1": "#0000ff",
+                "2": "#ffff00",
+                "3": "#ffff00",
+                "4": "#ffff00"
+            },
+            "6": {
+                "1": "#0000ff",
+                "2": "#ffff00",
+                "3": "#ffff00",
+                "4": "#ffffff"
+            },
+            "7": {
+                "5": "#ffff00",
+                "3": "#ffffff",
+                "4": "#ffffff"
+            },
+            "8": {
+                "3": "#ffffff",
+                "2": "#ffffff",
+                "4": "#ffffff"
+            },
+            "9": {
+                "3": "#ffffff",
+                "4": "#ffffff"
+            },
+            "10": {
+                "3": "#ffffff"
+            },
+            "11": {
+                "2": "#ffffff"
+            },
+            "12": {},
+            "13": {},
+            "14": {},
+            "15": {},
+            "16": {},
+            "17": {},
+            "18": {},
+            "19": {},
+            "20": {},
+            "21": {}
+        }
+    ]
+}
