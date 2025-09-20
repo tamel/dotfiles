@@ -1,0 +1,22 @@
+function setup_session_vars
+
+    if set -q __FISH_SESSION_VARS_SOURCED
+        return
+    end
+
+    set -gx __FISH_SESSION_VARS_SOURCED 1
+
+    # verified
+    set -gx NH_FLAKE '{{ .chezmoi.homeDir }}/.nix-cfg'
+    set -gx EDITOR nvim
+
+    # TODO After everything was ported, check these vars again
+    set -gx HYPRCURSOR_SIZE 24
+    set -gx HYPRCURSOR_THEME catppuccin-mocha-mauve-cursors
+    set -gx LOCALE_ARCHIVE_2_27 '/nix/store/008h0z2m22alg2v8kcdcw4v0f7c39lmm-glibc-locales-2.40-66/lib/locale/locale-archive'
+    set -gx NIX_XDG_DESKTOP_PORTAL_DIR '/home/tamel/.nix-profile/share/xdg-desktop-portal/portals'
+    set -gx TMUX_TMPDIR (test -n "$XDG_RUNTIME_DIR" && echo "$XDG_RUNTIME_DIR" || echo '/run/user/'(id -u | string collect; or echo))
+    set -gx XCURSOR_SIZE 24
+    set -gx XCURSOR_THEME catppuccin-mocha-mauve-cursors
+    set -gx XCURSOR_PATH '/home/tamel/.nix-profile/share/icons'(test -n "$XCURSOR_PATH" && echo ':' || echo)"$XCURSOR_PATH"
+end
