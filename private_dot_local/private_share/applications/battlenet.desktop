@@ -1,0 +1,14 @@
+[Desktop Entry]
+Exec=net.lutris.Lutris lutris:rungame/battlenet
+Icon=/home/tamel/.local/share/dot-file-assets/images/battlenet.png
+Name=Battle.net
+Terminal=false
+Type=Application
+Version=1.5
+Name[en]=Battle.net
+Name[en_US]=Battle.net
+Name[en_US.UTF-8]=Battle.net
+Hidden=false
+NoDisplay=false
+StartupNotify=false
+
