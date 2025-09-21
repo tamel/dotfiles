@@ -1,0 +1,121 @@
+theme "catppuccin-mocha"
+
+show_startup_tips false
+
+default_shell "fish"
+
+plugins {
+  autolock location="https://github.com/fresh2dev/zellij-autolock/releases/download/0.2.2/zellij-autolock.wasm" {
+    triggers "nvim|fzf|zoxide"
+  }
+}
+
+load_plugins {
+  autolock
+}
+
+keybinds clear-defaults=true {
+  locked {
+    bind "Ctrl a" { SwitchToMode "normal"; }
+  }
+
+  normal {
+    bind "Ctrl a" {SwitchToMode "locked"; }
+    bind "Ctrl h" { MoveFocus "Left"; }
+    bind "Ctrl j" { MoveFocus "Down"; }
+    bind "Ctrl k" { MoveFocus "Up"; }
+    bind "Ctrl l" { MoveFocus "Right"; }
+    bind "Ctrl p" { SwitchToMode "pane"; }
+    bind "Ctrl o" { SwitchToMode "tab"; }
+    bind "Ctrl u" { SwitchToMode "session"; }
+  }
+
+  session {
+    bind "w" {
+      LaunchOrFocusPlugin "zellij:session-manager" { floating true; }; SwitchToMode "normal";
+    }
+    bind "d" { Detach; }
+  }
+
+  tab {
+    bind "n" { NewTab; SwitchToMode "normal"; }
+    bind "x" { CloseTab; SwitchToMode "normal"; }
+    bind "r" { SwitchToMode "renametab"; }
+    bind "l" { GoToNextTab; }
+    bind "h" { GoToPreviousTab; }
+    bind "Shift h" { MoveTab "Left"; }
+    bind "Shift l" { MoveTab "Right"; }
+    bind "1" { GoToTab 1; SwitchToMode "normal"; }
+    bind "2" { GoToTab 2; SwitchToMode "normal"; }
+    bind "3" { GoToTab 3; SwitchToMode "normal"; }
+    bind "4" { GoToTab 4; SwitchToMode "normal"; }
+    bind "5" { GoToTab 5; SwitchToMode "normal"; }
+    bind "6" { GoToTab 6; SwitchToMode "normal"; }
+    bind "7" { GoToTab 7; SwitchToMode "normal"; }
+    bind "8" { GoToTab 8; SwitchToMode "normal"; }
+    bind "9" { GoToTab 9; SwitchToMode "normal"; }
+  }
+
+  pane {
+    bind "n" { NewPane; SwitchToMode "normal"; }
+    bind "r" { SwitchToMode "renamepane"; }
+    bind "ä" { NextSwapLayout; }
+    bind "ö" { PreviousSwapLayout; }
+    bind "c" { SwitchToMode "resize"; }
+    bind "s" { SwitchToMode "scroll"; }
+    bind "f" { ToggleFloatingPanes; SwitchToMode "normal"; }
+    bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "normal"; }
+    bind "m" { ToggleFocusFullscreen; SwitchToMode "normal"; }
+    bind "x" { CloseFocus; }
+    bind "/" { SwitchToMode "entersearch"; }
+    bind "z" { TogglePaneFrames; }
+
+    bind "h" { MoveFocus "Left"; }
+    bind "j" { MoveFocus "Down"; }
+    bind "k" { MoveFocus "Up"; }
+    bind "l" { MoveFocus "Right"; }
+
+    bind "Shift h" { MovePane "Left"; }
+    bind "Shift j" { MovePane "Down"; }
+    bind "Shift k" { MovePane "Up"; }
+    bind "Shift l" { MovePane "Right"; }
+  }
+
+  entersearch {
+    bind "Enter" { SwitchToMode "search"; }
+  }
+
+  search {
+    bind "n" { Search "down"; }
+    bind "Shift n" { Search "up"; }
+    bind "c" { SearchToggleOption "CaseSensitivity"; }
+    bind "w" { SearchToggleOption "Wrap"; }
+  }
+
+  resize {
+    bind "h" { Resize "Left"; }
+    bind "j" { Resize "Down"; }
+    bind "k" { Resize "Up"; }
+    bind "l" { Resize "Right"; }
+  }
+
+  shared_among "scroll" "search" {
+    bind "j" { ScrollDown; }
+    bind "k" { ScrollUp; }
+    bind "Shift g" { ScrollToBottom; }
+    bind "g" { ScrollToTop; }
+    bind "d" { HalfPageScrollDown; }
+    bind "u" { HalfPageScrollUp; }
+    bind "PageUp" { PageScrollUp; }
+    bind "PageDown" { PageScrollDown; }
+    bind "/" { SwitchToMode "entersearch"; }
+  }
+
+  shared_among "renamepane" "renametab" {
+    bind "Enter" { SwitchToMode "normal"; }
+  }
+
+  shared_except "normal" "locked" "renametab" "renamepane" "entersearch" {
+    bind "q" { SwitchToMode "normal"; }
+  }
+}
