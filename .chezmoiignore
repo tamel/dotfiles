@@ -1,0 +1,4 @@
+# ignore desktop entries. This comes in handy especially for systems without UI (e.g. WSL)
+{{- if eq .ignore.wowDesktopEntries "true" }}
+.local/share/applications/battlenet.desktop
+{{- end }}
