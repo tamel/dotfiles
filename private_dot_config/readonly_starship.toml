@@ -1,0 +1,56 @@
+format = "$all"
+palette = "catppuccin_mocha"
+
+[custom.git_branch]
+command = "jj root >/dev/null 2>&1 || starship module git_branch"
+description = "Only show git_branch if we're not in a jj repo"
+when = true
+
+[custom.jj]
+command = "jj log --revisions @ --no-graph --ignore-working-copy --color always --limit 1 --template '\n  separate(\" \",\n    change_id.shortest(4),\n    bookmarks,\n    \"|\",\n    concat(\n      if(conflict, \"💥\"),\n      if(divergent, \"🚧\"),\n      if(hidden, \"👻\"),\n      if(immutable, \"🔒\"),\n    ),\n    raw_escape_sequence(\"\\x1b[1;32m\") ++ if(empty, \"(empty)\"),\n    raw_escape_sequence(\"\\x1b[1;32m\") ++ coalesce(\n      truncate_end(29, description.first_line(), \"…\"),\n      \"(no description set)\",\n    ) ++ raw_escape_sequence(\"\\x1b[0m\"),\n  )\n'\n"
+format = "[$symbol](blue bold) $output "
+symbol = "󱗆 "
+when = "jj root --ignore-working-copy"
+
+[git_branch]
+disabled = true
+
+[git_commit]
+disabled = true
+
+[git_metrics]
+disabled = true
+
+[git_state]
+disabled = true
+
+[os]
+disabled = true
+
+[palettes.catppuccin_mocha]
+base = "#1e1e2e"
+blue = "#89b4fa"
+crust = "#11111b"
+flamingo = "#f2cdcd"
+green = "#a6e3a1"
+lavender = "#b4befe"
+mantle = "#181825"
+maroon = "#eba0ac"
+mauve = "#cba6f7"
+overlay0 = "#6c7086"
+overlay1 = "#7f849c"
+overlay2 = "#9399b2"
+peach = "#fab387"
+pink = "#f5c2e7"
+red = "#f38ba8"
+rosewater = "#f5e0dc"
+sapphire = "#74c7ec"
+sky = "#89dceb"
+subtext0 = "#a6adc8"
+subtext1 = "#bac2de"
+surface0 = "#313244"
+surface1 = "#45475a"
+surface2 = "#585b70"
+teal = "#94e2d5"
+text = "#cdd6f4"
+yellow = "#f9e2af"
