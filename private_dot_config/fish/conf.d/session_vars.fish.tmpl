@@ -8,7 +8,6 @@ function setup_session_vars
 
     # verified
     set -gx NH_FLAKE '{{ .chezmoi.homeDir }}/.nix-cfg'
-    set -gx EDITOR nvim
 
     # TODO After everything was ported, check these vars again
     set -gx HYPRCURSOR_SIZE 24
