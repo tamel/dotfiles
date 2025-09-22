@@ -1,5 +1,5 @@
 if not set -q __FZF_VARS_SOURCED
-    set -xg __FZF_VARS_SOURCED
+    set -xg __FZF_VARS_SOURCED 1
 
     set -gx FZF_ALT_C_COMMAND 'fd --type=d --hidden --strip-cwd-prefix --exclude .git'
     set -gx FZF_ALT_C_OPTS '--preview \'eza --tree --color=always {} | head -200\''

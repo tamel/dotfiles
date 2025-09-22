@@ -18,6 +18,9 @@ status is-interactive; and begin
     # configure eza
     setup_eza
 
+    # configure jujutsu
+    setup_jj
+
     # configure lazygit
     setup_lazygit
 
@@ -41,6 +44,9 @@ status is-interactive; and begin
 
     # configure kitty shell integration
     setup_kitty
+
+    # configure neovim
+    setup_nvim
 
     # Abbreviations
 
