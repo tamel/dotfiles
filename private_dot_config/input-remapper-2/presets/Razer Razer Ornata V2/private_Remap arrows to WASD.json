@@ -1,0 +1,63 @@
+[
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 31,
+                "origin_hash": "fdc46c6cea63b1b27e907307b9cc8472"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Down",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 32,
+                "origin_hash": "fdc46c6cea63b1b27e907307b9cc8472"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Right",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 17,
+                "origin_hash": "fdc46c6cea63b1b27e907307b9cc8472"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Up",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 30,
+                "origin_hash": "fdc46c6cea63b1b27e907307b9cc8472"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Left",
+        "name": "a",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 16,
+                "origin_hash": "fdc46c6cea63b1b27e907307b9cc8472"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Escape",
+        "mapping_type": "key_macro"
+    }
+]

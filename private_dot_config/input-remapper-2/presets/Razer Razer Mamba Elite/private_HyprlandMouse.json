@@ -1,0 +1,14 @@
+[
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 276,
+                "origin_hash": "77dc91b87ffbff8df22e881d211ff911"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Alt_L",
+        "mapping_type": "key_macro"
+    }
+]
