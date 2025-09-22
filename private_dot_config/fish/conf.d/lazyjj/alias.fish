@@ -1,3 +1,3 @@
-function l
+function lj
     lazyjj
 end
