@@ -1,8 +1,5 @@
 # ignore desktop entries. This comes in handy especially for systems without UI (e.g. WSL)
 {{- if eq .system.isGamingPC "false" }}
-.local/share/applications/battlenet.desktop
-.local/share/dot-file-assets/scripts/modes/*
-
 .config/input-remapper-2/*
 .config/polychromatic/*
 .config/kitty/*

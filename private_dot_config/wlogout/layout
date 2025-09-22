@@ -1,6 +1,6 @@
 {"action":"loginctl lock-session","keybind":"","label":"lock","text":"Lock"}
-{"action":"/home/tamel/.local/share/dot-file-assets/scripts/modes/razerLedOff.sh && systemctl hibernate","keybind":"","label":"hibernate","text":"Hibernate"}
-{"action":"/home/tamel/.local/share/dot-file-assets/scripts/modes/razerLedOff.sh && hyprctl dispatch exit","keybind":"","label":"logout","text":"Logout"}
-{"action":"/home/tamel/.local/share/dot-file-assets/scripts/modes/razerLedOff.sh && systemctl poweroff","keybind":"","label":"shutdown","text":"Shutdown"}
-{"action":"/home/tamel/.local/share/dot-file-assets/scripts/modes/razerLedOff.sh && systemctl suspend","keybind":"","label":"suspend","text":"Suspend"}
-{"action":"/home/tamel/.local/share/dot-file-assets/scripts/modes/razerLedOff.sh && systemctl reboot","keybind":"","label":"reboot","text":"Reboot"}
+{"action":"razerLedOff && systemctl hibernate","keybind":"","label":"hibernate","text":"Hibernate"}
+{"action":"razerLedOff && hyprctl dispatch exit","keybind":"","label":"logout","text":"Logout"}
+{"action":"razerLedOff && systemctl poweroff","keybind":"","label":"shutdown","text":"Shutdown"}
+{"action":"razerLedOff && systemctl suspend","keybind":"","label":"suspend","text":"Suspend"}
+{"action":"razerLedOff && systemctl reboot","keybind":"","label":"reboot","text":"Reboot"}

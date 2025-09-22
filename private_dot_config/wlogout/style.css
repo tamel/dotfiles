@@ -4,7 +4,7 @@
 }
 
 window {
-  background: url("/home/tamel/.config/hypr/wallpaper/wallpaper.jpg");
+  background: url("/etc/nix-store-links/user/tamel/images/jinx-neon.jpg");
   background-size: cover;
 }
 
