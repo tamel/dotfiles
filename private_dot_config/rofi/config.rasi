@@ -1,0 +1,30 @@
+@theme "catppuccin-default"
+
+configuration {
+disable-history: false;
+display-drun: " 🖥️  Apps ";
+display-run: " 🏃  Run ";
+display-window: " 🪟  Window";
+drun-display-format: "{icon} {name}";
+hide-scrollbar: true;
+icon-theme: "Oranchelo";
+kb-accept-entry: "Return";
+kb-element-next: "";
+kb-mode-complete: "";
+kb-mode-next: "Tab";
+kb-move-char-back: "";
+kb-move-char-forward: "";
+kb-remove-char-back: "BackSpace";
+kb-remove-to-eol: "";
+kb-row-down: "Down,Control+j";
+kb-row-left: "Left,Control+h";
+kb-row-right: "Right,Control+l";
+kb-row-up: "Up,Control+k";
+location: 0;
+modi: "drun,run,window";
+show-icons: true;
+sidebar-mode: true;
+terminal: "kitty";
+xoffset: 0;
+yoffset: 0;
+}
