@@ -1,9 +1,16 @@
 # ignore desktop entries. This comes in handy especially for systems without UI (e.g. WSL)
 {{- if eq .system.isGamingPC "false" }}
-.config/hypr
+.config/gtk-3.0/*
+.config/gtk-4.0/*
+.config/hypr/*
 .config/input-remapper-2/*
 .config/kitty/*
 .config/polychromatic/*
-.config/waybar
-.config/wlogout
+.config/waybar/*
+.config/wlogout/*
+
+.local/share/icons/*
+.local/share/themes/*
+
+.gtkrc-2.0
 {{- end }}
