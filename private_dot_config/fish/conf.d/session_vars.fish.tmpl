@@ -6,11 +6,20 @@ function setup_session_vars
 
     set -gx __FISH_SESSION_VARS_SOURCED 1
 
-    # verified
     set -gx NH_FLAKE '{{ .chezmoi.homeDir }}/.nix-cfg'
 
+    # set xdg config dirs
+    set -gx XDG_DESKTOP_DIR /home/tamel/Desktop
+    set -gx XDG_DOWNLOAD_DIR /home/tamel/Downloads
+    set -gx XDG_TEMPLATES_DIR /home/tamel/Templates
+    set -gx XDG_PUBLICSHARE_DIR /home/tamel/Public
+    set -gx XDG_DOCUMENTS_DIR /home/tamel/Documents
+    set -gx XDG_MUSIC_DIR /home/tamel/Music
+    set -gx XDG_PICTURES_DIR /home/tamel/Pictures
+    set -gx XDG_VIDEOS_DIR /home/tamel/Videos
+
     # TODO After everything was ported, check these vars again
-    set -gx LOCALE_ARCHIVE_2_27 '/nix/store/008h0z2m22alg2v8kcdcw4v0f7c39lmm-glibc-locales-2.40-66/lib/locale/locale-archive'
-    set -gx NIX_XDG_DESKTOP_PORTAL_DIR '/home/tamel/.nix-profile/share/xdg-desktop-portal/portals'
-    set -gx TMUX_TMPDIR (test -n "$XDG_RUNTIME_DIR" && echo "$XDG_RUNTIME_DIR" || echo '/run/user/'(id -u | string collect; or echo))
+    # set -gx LOCALE_ARCHIVE_2_27 '/nix/store/008h0z2m22alg2v8kcdcw4v0f7c39lmm-glibc-locales-2.40-66/lib/locale/locale-archive'
+    # set -gx NIX_XDG_DESKTOP_PORTAL_DIR '/home/tamel/.nix-profile/share/xdg-desktop-portal/portals'
+    # set -gx TMUX_TMPDIR (test -n "$XDG_RUNTIME_DIR" && echo "$XDG_RUNTIME_DIR" || echo '/run/user/'(id -u | string collect; or echo))
 end
