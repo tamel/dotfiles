@@ -85,6 +85,23 @@ button:hover {
   border-bottom: 2px solid @red;
 }
 
+#custom-browser, #custom-files, #custom-rofi {
+  margin-top: 2px;
+  color: @lavender;
+  border-bottom: 2px solid @lavender;
+}
+
+#custom-browser {
+  margin-left: 4px;
+  padding-left: 4px;
+}
+
+#custom-rofi {
+  margin-right: 4px;
+  padding-right: 4px;
+}
+
+
 #submap {
   color: @teal;
   border-bottom: 2px solid @teal;

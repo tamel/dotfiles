@@ -10,12 +10,30 @@
       "on-click": "wlogout",
       "tooltip": false
     },
+    "custom/browser": {
+      "format": " <span size='13000'></span>   ",
+      "tooltip": false,
+      "on-click": "flatpak run com.vivaldi.Vivaldi"
+    },
+    "custom/files": {
+      "format": "<span size='13000'>󰪶</span>  ",
+      "tooltip": false,
+      "on-click": "nautilus"
+    },
+    "custom/rofi": {
+      "format": "<span size='13000'>󰶮</span> ",
+      "tooltip": false,
+      "on-click": "rofi -show drun"
+    },
     "modules-center": [
       "hyprland/window"
     ],
     "modules-left": [
       "hyprland/workspaces",
-      "hyprland/submap"
+      "hyprland/submap",
+      "custom/browser",
+      "custom/files",
+      "custom/rofi"
     ],
     "modules-right": [
       "mpris",
