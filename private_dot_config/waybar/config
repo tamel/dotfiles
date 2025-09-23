@@ -1,0 +1,123 @@
+[
+  {
+    "clock": {
+      "format": "<span>   </span>{:%a %d. %B - %H:%M}",
+      "tooltip": false,
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "custom/wlogout": {
+      "format": " <span size='13000'></span>  ",
+      "on-click": "wlogout",
+      "tooltip": false
+    },
+    "modules-center": [
+      "hyprland/window"
+    ],
+    "modules-left": [
+      "hyprland/workspaces",
+      "hyprland/submap"
+    ],
+    "modules-right": [
+      "mpris",
+      "tray",
+      "network",
+      "pulseaudio",
+      "clock",
+      "custom/wlogout"
+    ],
+    "mpris": {
+      "artist-len": 30,
+      "dynamic-importance-order": [
+        "titel"
+      ],
+      "dynamic-len": 50,
+      "dynamic-order": [
+        "title",
+        "artist"
+      ],
+      "format": "{status_icon}  {dynamic}",
+      "status-icons": {
+        "paused": "󰝛",
+        "playing": "󰝚",
+        "stopped": "󰝛"
+      },
+      "title-len": 30
+    },
+    "network": {
+      "format-disconnected": "<span size='13000'>  </span>Disconnected",
+      "format-ethernet": "<span size='13000'>  </span> Ethernet",
+      "format-linked": "linked {ifname} (No IP) ",
+      "format-wifi": "<span size='13000'>  </span>{essid}",
+      "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+    },
+    "output": "DP-1",
+    "position": "top",
+    "pulseaudio": {
+      "format": "{icon}  {volume}%",
+      "format-icons": {
+        "default": [
+          "",
+          "",
+          " "
+        ]
+      },
+      "format-muted": "",
+      "on-click": "pavucontrol"
+    },
+    "tray": {
+      "icon-size": 20,
+      "show-passive-items": true,
+      "spacing": 5
+    }
+  },
+  {
+    "clock": {
+      "format": "<span>   </span>{:%a %d. %B - %H:%M}",
+      "tooltip": false,
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "custom/wlogout": {
+      "format": " <span size='13000'></span>  ",
+      "on-click": "wlogout",
+      "tooltip": false
+    },
+    "modules-center": [],
+    "modules-left": [
+      "hyprland/workspaces",
+      "hyprland/submap"
+    ],
+    "modules-right": [
+      "tray",
+      "network",
+      "pulseaudio",
+      "clock",
+      "custom/wlogout"
+    ],
+    "network": {
+      "format-disconnected": "<span size='13000'>  </span>Disconnected",
+      "format-ethernet": "<span size='13000'>  </span> Ethernet",
+      "format-linked": "linked {ifname} (No IP) ",
+      "format-wifi": "<span size='13000'>  </span>{essid}",
+      "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+    },
+    "output": "DP-2",
+    "position": "top",
+    "pulseaudio": {
+      "format": "{icon}  {volume}%",
+      "format-icons": {
+        "default": [
+          "",
+          "",
+          " "
+        ]
+      },
+      "format-muted": "",
+      "on-click": "pavucontrol"
+    },
+    "tray": {
+      "icon-size": 20,
+      "show-passive-items": true,
+      "spacing": 5
+    }
+  }
+]
