@@ -59,7 +59,7 @@
         "playing": "󰝚",
         "stopped": "󰝛"
       },
-      "title-len": 30
+      "title-len": 30,
     },
     "network": {
       "format-disconnected": "<span size='13000'>  </span>Disconnected",
@@ -80,7 +80,8 @@
         ]
       },
       "format-muted": "",
-      "on-click": "pavucontrol"
+      "on-click": "switch-audio-sink",
+      "on-click-right": "pavucontrol"
     },
     "tray": {
       "icon-size": 20,
@@ -130,7 +131,8 @@
         ]
       },
       "format-muted": "",
-      "on-click": "pavucontrol"
+      "on-click": "switch-audio-sink",
+      "on-click-right": "pavucontrol"
     },
     "tray": {
       "icon-size": 20,
