@@ -85,7 +85,7 @@ button:hover {
   border-bottom: 2px solid @red;
 }
 
-#custom-browser, #custom-files, #custom-rofi {
+#custom-browser, #custom-files {
   margin-top: 2px;
   color: @lavender;
   border-bottom: 2px solid @lavender;
@@ -96,7 +96,7 @@ button:hover {
   padding-left: 4px;
 }
 
-#custom-rofi {
+#custom-files {
   margin-right: 4px;
   padding-right: 4px;
 }
