@@ -1,0 +1,112 @@
+return {
+	"olimorris/codecompanion.nvim",
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+	},
+	keys = {
+		{ "<leader>ac", "<cmd>CodeCompanionChat<CR>", desc = "CodeCompanion: Open" },
+		{ "<leader>aa", "<cmd>CodeCompanionActions<CR>", desc = "CodeCompanion: Actions" },
+		{
+			"<leader>ai",
+			function()
+				local input = vim.fn.input("Waht shall I do: ")
+				vim.api.nvim_command(":CodeCompanion " .. input)
+			end,
+			desc = "CodeCompanion: Inline",
+		},
+	},
+	opts = {
+		log_level = "TRACE",
+		send_code = true,
+		use_default_actions = true,
+		use_default_prompts = true,
+		adapters = {
+{{- if eq .system.isGamingPC "true" }}
+			ollama = function()
+				return require("codecompanion.adapters").extend("ollama", {
+					env = {
+						url = "http://127.0.0.1:11434",
+					},
+					schema = {
+						model = {
+							default = "qwen3:14b",
+						},
+						num_ctx = {
+							default = 32768,
+						},
+					},
+				})
+			end,
+{{- end }}
+{{- if eq .system.isWorkWSL "true" }}
+			work = function()
+				local readFile = function(path)
+					local file = io.open(path, "r")
+					local content = file:read("*all")
+					file:close()
+					return content
+				end
+				return require("codecompanion.adapters").extend("openai_compatible", {
+					env = {
+						url = readFile("/home/tamel/.config/nvim/files/work-llm-url.txt"),
+						api_key = readFile("/home/tamel/.config/nvim/files/work-llm-api-key.txt"),
+						chat_url = "/v1/chat/completions",
+						models_endpoint = "/v1/models",
+					},
+					schema = {
+						model = {
+							default = "Qwen/Qwen3-30B-A3B-FP8",
+						},
+						num_ctx = {
+							default = 32768,
+						},
+					},
+				})
+			end,
+{{- end }}
+		},
+		strategies = {
+			agent = {
+{{- if eq .system.isGamingPC "true" }}
+        adapter = "ollama",
+{{- else if eq .system.isWorkWSL "true" }}
+				adapter = "work",
+{{- end }}
+			},
+			chat = {
+{{- if eq .system.isGamingPC "true" }}
+        adapter = "ollama",
+{{- else if eq .system.isWorkWSL "true" }}
+				adapter = "work",
+{{- end }}
+				slash_commands = {
+					["file"] = {
+						-- Location to the slash command in CodeCompanion
+						callback = "strategies.chat.slash_commands.file",
+						description = "Select a file using Snacks",
+						opts = {
+							provider = "snacks", -- Can be "default", "telescope", "fzf_lua", "mini_pick" or "snacks"
+							contains_code = true,
+						},
+					},
+				},
+			},
+			inline = {
+{{- if eq .system.isGamingPC "true" }}
+        adapter = "ollama",
+{{- else if eq .system.isWorkWSL "true" }}
+				adapter = "work",
+{{- end }}
+			},
+		},
+		display = {
+			action_palette = {
+				provider = "default",
+				opts = {
+					show_default_actions = true,
+					show_default_prompt_library = true,
+				},
+			},
+		},
+	},
+}
