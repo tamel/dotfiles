@@ -1,7 +1,8 @@
 [global]
-frame_color = "#89b4fa"
+frame_color = "#cba6f7"
 separator_color= frame
-highlight = "#89b4fa"
+highlight = "#cba6f7"
+
 
 monitor="DP-1"
 origin=top-center
