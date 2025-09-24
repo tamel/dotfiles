@@ -16,5 +16,5 @@
 {{- end }}
 
 {{- if eq .system.isWorkWSL "false" }}
-.config/nvim/files/work-llm-*
+.config/nvim/files
 {{- end }}

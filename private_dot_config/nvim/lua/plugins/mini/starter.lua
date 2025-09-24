@@ -20,6 +20,7 @@ return {
         { action = "qall",                      name = "Quit",       section = "Actions" },
         { action = "lua MiniFiles.open()",      name = "Browse",     section = "Files" },
         { action = "lua Snacks.picker.files()", name = "Find Files", section = "Files" },
+        { action = "RemoteStart",               name = "Start",      section = "Remote" },
         starter.sections.recent_files,
       },
       content_hooks = {
