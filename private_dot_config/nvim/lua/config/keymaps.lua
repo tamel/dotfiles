@@ -15,14 +15,14 @@ keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decremen
 keymap.set("v", "<leader>*", "g<C-a>")
 
 -- window management
-keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
-keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
-keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal size
-keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split windows
-keymap.set("n", "Ü", "5<C-w>+", { desc = "Increase split heigh" })
-keymap.set("n", "ü", "5<C-w>-", { desc = "Decrease split heigh" })
-keymap.set("n", "*", "5<C-w>>", { desc = "Decrease split heigh" })
-keymap.set("n", "+", "5<C-w><", { desc = "Decrease split heigh" })
+keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Window: Split window vertically" })     -- split window vertically
+keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Window: Split window horizontally" })   -- split window horizontally
+keymap.set("n", "<leader>se", "<C-w>=", { desc = "Window: Make splits equal size" })      -- make split windows equal size
+keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Window: Close current split" }) -- close current split windows
+keymap.set("n", "Ü", "5<C-w>+", { desc = "Window: Increase split heigh" })
+keymap.set("n", "ü", "5<C-w>-", { desc = "Window: Decrease split heigh" })
+keymap.set("n", "*", "5<C-w>>", { desc = "Window: Decrease split heigh" })
+keymap.set("n", "+", "5<C-w><", { desc = "Window: Decrease split heigh" })
 
 -- scrolling
 keymap.set("n", "ö", "<C-d>zz", { desc = "Scroll half page down and center" })

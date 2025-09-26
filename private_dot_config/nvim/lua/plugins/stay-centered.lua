@@ -7,7 +7,7 @@ return {
       function()
         require("stay-centered").toggle()
       end,
-      desc = "toggle stay centered",
+      desc = "StayCentered: toggle stay centered",
     },
   },
   opts = {
