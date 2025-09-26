@@ -15,6 +15,9 @@ end
 
 status is-interactive; and begin
 
+    #check if brew is installed and initialize if it is
+    init_brew
+
     # configure eza
     setup_eza
 
