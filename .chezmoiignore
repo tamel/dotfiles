@@ -18,3 +18,7 @@
 {{- if eq .system.isWorkWSL "false" }}
 .config/nvim/files
 {{- end }}
+
+{{- if eq .system.withSSH "false" }}
+.ssh/
+{{- end }}

@@ -1,3 +1,4 @@
 [system]
 isGamingPC = "false"
 isWorkWSL = "false"
+withSSH = "false"
