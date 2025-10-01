@@ -2,3 +2,6 @@
 isGamingPC = "false"
 isWorkWSL = "false"
 withSSH = "false"
+
+[nvim.overseer]
+use_shell = true

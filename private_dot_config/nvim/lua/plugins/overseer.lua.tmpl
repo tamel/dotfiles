@@ -33,7 +33,7 @@ return {
     },
     strategy = {
       "toggleterm",
-      use_shell = true,
+      use_shell = {{ .nvim.overseer.use_shell }},
     }
   },
 }
