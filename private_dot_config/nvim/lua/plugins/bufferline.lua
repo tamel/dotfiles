@@ -1,7 +1,10 @@
 return {
   "akinsho/bufferline.nvim",
   version = "*",
-  dependencies = "nvim-mini/mini.files",
+  dependencies = {
+    "nvim-mini/mini.files",
+    "catppuccin/nvim",
+  },
   lazy = true,
   event = "VeryLazy",
   keys = {
@@ -11,11 +14,14 @@ return {
     { "<leader>tp", "<cmd>tabp<CR>",     desc = "Tab: Go to previous tab" },
     { "<leader>tf", "<cmd>tabnew %<CR>", desc = "Tab: Open current buffer in new tab" },
   },
-  opts = {
-    options = {
-      mode = "tabs",
-      always_show_bufferline = false,
-      auto_toggle_bufferline = true,
-    },
-  },
+  config = function()
+    require("bufferline").setup({
+      options = {
+        mode = "tabs",
+        always_show_bufferline = false,
+        auto_toggle_bufferline = true,
+      },
+      highlights = require("catppuccin.special.bufferline").get_theme(),
+    })
+  end,
 }
