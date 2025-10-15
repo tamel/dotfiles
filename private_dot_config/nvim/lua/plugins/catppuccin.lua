@@ -15,6 +15,7 @@ return {
         scope_color = "mauve",
         colored_indent_levels = false,
       },
+      harpoon = true,
       mason = true,
       neotest = true,
       cmp = true,
