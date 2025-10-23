@@ -24,6 +24,28 @@ return {
         }),
         require("neotest-ctest").setup({}),
       },
+      projects = {
+        ["/workspaces/med-sevilla-swc"] = {
+          discovery = {
+            filter_dir = function(name, rel_path, root)
+              return name ~= "build-debug" and name ~= "build-release"
+            end,
+          },
+          adapters = {
+            require("neotest-ctest").setup({
+              is_test_file = function(file_path)
+                local res = string.match(file_path, ".*/Test[^/]+%.cpp")
+                if res then
+                  return true
+                else
+                  return false
+                end
+              end,
+              frameworks = { "gtest" },
+            }),
+          },
+        },
+      },
     })
   end,
 }
