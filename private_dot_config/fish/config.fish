@@ -54,4 +54,7 @@ status is-interactive; and begin
     # configure carapace
     setup_carapace
 
+    # configure nix-your-shell
+    setup_nix-your-shell
+
 end
