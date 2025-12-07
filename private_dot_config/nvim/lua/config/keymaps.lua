@@ -9,6 +9,12 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 keymap.set("n", "<leader>v", "<C-q>", { desc = "Enter block selection mode" })
 
+-- invert scroll direction
+keymap.set("n", "(", "}zz", { desc = "Scroll paragraph down" })
+keymap.set("n", ")", "{zz", { desc = "Sroll paragraph up" })
+keymap.set("n", "{", "<C-d>zz", { desc = "Sroll half page down" })
+keymap.set("n", "}", "<C-u>zz", { desc = "Sroll half page up" })
+
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
