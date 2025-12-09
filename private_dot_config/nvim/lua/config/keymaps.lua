@@ -10,10 +10,10 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("n", "<leader>v", "<C-q>", { desc = "Enter block selection mode" })
 
 -- invert scroll direction
-keymap.set("n", "(", "}zz", { desc = "Scroll paragraph down" })
-keymap.set("n", ")", "{zz", { desc = "Sroll paragraph up" })
-keymap.set("n", "{", "<C-d>zz", { desc = "Sroll half page down" })
-keymap.set("n", "}", "<C-u>zz", { desc = "Sroll half page up" })
+keymap.set("n", "{", "}zz", { desc = "Scroll paragraph down" })
+keymap.set("n", "}", "{zz", { desc = "Sroll paragraph up" })
+keymap.set("n", "(", "<C-d>zz", { desc = "Sroll half page down" })
+keymap.set("n", ")", "<C-u>zz", { desc = "Sroll half page up" })
 
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
@@ -25,10 +25,10 @@ keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Window: Split window verticall
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Window: Split window horizontally" })   -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Window: Make splits equal size" })      -- make split windows equal size
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Window: Close current split" }) -- close current split windows
-keymap.set("n", "Ü", "5<C-w>+", { desc = "Window: Increase split heigh" })
-keymap.set("n", "ü", "5<C-w>-", { desc = "Window: Decrease split heigh" })
-keymap.set("n", "*", "5<C-w>>", { desc = "Window: Decrease split heigh" })
-keymap.set("n", "+", "5<C-w><", { desc = "Window: Decrease split heigh" })
+keymap.set("n", "-", "5<C-w>+", { desc = "Window: Increase split heigh" })
+keymap.set("n", "_", "5<C-w>-", { desc = "Window: Decrease split heigh" })
+keymap.set("n", "+", "5<C-w>>", { desc = "Window: Decrease split heigh" })
+keymap.set("n", "*", "5<C-w><", { desc = "Window: Decrease split heigh" })
 
 -- scrolling
 keymap.set("n", "ö", "<C-d>zz", { desc = "Scroll half page down and center" })
