@@ -1,6 +1,6 @@
 {"action":"loginctl lock-session","label":"lock","text":"Lock"}
-{"action":"razerLedOff && systemctl hibernate","label":"hibernate","text":"Hibernate"}
-{"action":"razerLedOff && hyprctl dispatch exit","label":"logout","text":"Logout"}
-{"action":"razerLedOff && systemctl poweroff","label":"shutdown","text":"Shutdown"}
-{"action":"razerLedOff && systemctl suspend","label":"suspend","text":"Suspend"}
-{"action":"razerLedOff && systemctl reboot","label":"reboot","text":"Reboot"}
+{"action":"razerLedOff; systemctl hibernate","label":"hibernate","text":"Hibernate"}
+{"action":"razerLedOff; hyprctl dispatch exit","label":"logout","text":"Logout"}
+{"action":"razerLedOff; systemctl poweroff","label":"shutdown","text":"Shutdown"}
+{"action":"razerLedOff; systemctl suspend","label":"suspend","text":"Suspend"}
+{"action":"razerLedOff; systemctl reboot","label":"reboot","text":"Reboot"}
