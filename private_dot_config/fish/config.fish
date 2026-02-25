@@ -57,4 +57,7 @@ status is-interactive; and begin
     # configure nix-your-shell
     setup_nix-your-shell
 
+    # setup serie
+    setup_serie
+
 end
