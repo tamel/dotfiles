@@ -41,6 +41,12 @@ return {
         opts.desc = "LSP: Show buffer diagnostics"
         keymap.set("n", "<leader>ldo", "<cmd>lua Snacks.picker.diagnostics_buffer()<CR>", opts) -- show diagnostics for file
 
+        opts.desc = "LSP: disable diagnostics for all buffers"
+        keymap.set("n", "<leader>ldD", function() vim.diagnostic.enable(false) end, opts) -- disable diagnostics for all buffers
+
+        opts.desc = "LSP: enable diagnostics for all buffers"
+        keymap.set("n", "<leader>ldE", function() vim.diagnostic.enable(true) end, opts) -- enable diagnostics for all buffers
+
         -- picker
         opts.desc = "LSP: Show LSP references"
         keymap.set("n", "gR", "<cmd>lua Snacks.picker.lsp_references()<CR>", opts) -- show definition, references
