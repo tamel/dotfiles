@@ -43,6 +43,7 @@ keybinds clear-defaults=true {
     bind "r" { SwitchToMode "renametab"; }
     bind "l" { GoToNextTab; }
     bind "h" { GoToPreviousTab; }
+    bind "b" { BreakPane; SwitchToMode "normal"; }
     bind "Shift h" { MoveTab "Left"; }
     bind "Shift l" { MoveTab "Right"; }
     bind "1" { GoToTab 1; SwitchToMode "normal"; }
