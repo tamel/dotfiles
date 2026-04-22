@@ -25,6 +25,7 @@ keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Window: Split window verticall
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Window: Split window horizontally" })   -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Window: Make splits equal size" })      -- make split windows equal size
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Window: Close current split" }) -- close current split windows
+keymap.set("n", "<leader>so", "<cmd>only<CR>", { desc = "Window: Close other splits" })   -- close other split windows
 keymap.set("n", "-", "5<C-w>+", { desc = "Window: Increase split heigh" })
 keymap.set("n", "_", "5<C-w>-", { desc = "Window: Decrease split heigh" })
 keymap.set("n", "+", "5<C-w>>", { desc = "Window: Decrease split heigh" })
