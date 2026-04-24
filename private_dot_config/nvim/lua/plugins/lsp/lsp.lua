@@ -28,6 +28,12 @@ return {
         opts.desc = "LSP: Show documentation for what is under cursor"
         keymap.set("n", "K", vim.lsp.buf.hover, opts) -- Show documentation for what is under cursor
 
+        opts.desc = "LSP: Toggle inline hints"
+        keymap.set("n", "<leader>lit", function()
+          local isEnabled = vim.lsp.inlay_hint.is_enabled()
+          vim.lsp.inlay_hint.enable(not isEnabled)
+        end, opts) -- toggle inlay hints
+
         -- diagnostics
         opts.desc = "LSP: Show line diagnostics"
         keymap.set("n", "<leader>lds", vim.diagnostic.open_float, opts) -- show diagnostics for line
