@@ -68,7 +68,7 @@ return {
 
         -- other
         opts.desc = "LSP: Switch between header and source"
-        keymap.set("n", "gh", "<cmd>ClangdSwitchSourceHeader<CR>", opts)
+        keymap.set("n", "gh", "<cmd>LspClangdSwitchSourceHeader<CR>", opts)
       end,
     })
 
