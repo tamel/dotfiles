@@ -12,6 +12,7 @@ return {
     { "<leader>cmg",  "<cmd>CMakeGenerate<CR>",           desc = "cmake: generate" },
     { "<leader>cmsl", "<cmd>CMakeSelectLaunchTarget<CR>", desc = "cmake: select launch target" },
     { "<leader>cmsb", "<cmd>CMakeSelectBuildTarget<CR>",  desc = "cmake: select build target" },
+    { "<leader>cmsp", "<cmd>CMakeSelectBuildPreset<CR>",  desc = "cmake: select build preset" },
     { "<leader>cmc",  "<cmd>CMakeClean<CR>",              desc = "cmake: clean" },
   },
   opts = {
