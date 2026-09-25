@@ -38,29 +38,6 @@ hl.window_rule({
 })
 
 -- force tiling for certain apps
-hl.window_rule({
-  name = "tile-battlenet",
-  tile = true,
-  match = { title = "(Battle.net)" },
-})
-
-hl.window_rule({
-  name = "tile-battlenet-chats",
-  tile = true,
-  match = { title = "(Battle.net - Chats and Groups)" },
-})
-
-hl.window_rule({
-  name = "tile-vivaldi-settings",
-  tile = true,
-  match = { title = "(Vivaldi Settings:.*)" },
-})
-
-hl.window_rule({
-  name = "tile-pob",
-  tile = true,
-  match = { title = "(.*Path of Building)" },
-})
 
 -- default
 hl.window_rule({
