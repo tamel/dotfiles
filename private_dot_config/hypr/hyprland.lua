@@ -90,3 +90,9 @@ hl.device({
   name = "epic-mouse-v1",
   sensitivity = -0.5,
 })
+
+-- DMS Include Configs
+require("dms.layout")
+require("dms.binds")
+require("dms.binds-user")
+require("dms.outputs")

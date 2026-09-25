@@ -21,15 +21,15 @@ hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
 hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
 
-hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd("rofi -show drun"))
-hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd("rofi -show window"))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -show run"))
+-- hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd("rofi -show drun"))
+-- hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd("rofi -show window"))
+-- hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -show run"))
 
 hl.bind(mainMod .. " + mouse:275", hl.dsp.window.close())
 hl.bind(mainMod .. " + mouse:274", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + Left", hl.dsp.window.float())
 hl.bind(mainMod .. " + right", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))
+-- hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))
 
 hl.bind("Print", hl.dsp.exec_cmd("screenshot $HOME/Pictures/Screenshots"))
 
@@ -38,8 +38,8 @@ hl.bind("SUPER + L", hl.dsp.exec_cmd("loginctl lock-session"))
 hl.bind("SUPER + N", hl.dsp.exec_cmd("activateBaseEffects"))
 hl.bind("SUPER + O", hl.dsp.exec_cmd("activateDarkEffects"))
 hl.bind("SUPER + D", hl.dsp.exec_cmd("dunstctl close-all"))
-hl.bind("SUPER + W", hl.dsp.exec_cmd("switch_wallpaper -l | rofi -dmenu | switch_wallpaper -s"))
-hl.bind("SUPER + K", hl.dsp.exec_cmd("switch_wallpaper -k"))
+-- hl.bind("SUPER + W", hl.dsp.exec_cmd("switch_wallpaper -l | rofi -dmenu | switch_wallpaper -s"))
+-- hl.bind("SUPER + K", hl.dsp.exec_cmd("switch_wallpaper -k"))
 
 -- modifying workspaces
 for i = 1, 10 do
@@ -115,8 +115,8 @@ hl.define_submap("gaming", function()
   hl.bind("SUPER + SHIFT + 9", hl.dsp.window.move({ workspace = 9 }))
   hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
 
-  hl.bind("ALT + Space", hl.dsp.exec_cmd("rofi -show drun"))
-  hl.bind("ALT + Tab", hl.dsp.exec_cmd("rofi -show window"))
+  -- hl.bind("ALT + Space", hl.dsp.exec_cmd("rofi -show drun"))
+  -- hl.bind("ALT + Tab", hl.dsp.exec_cmd("rofi -show window"))
   hl.bind("SUPER + C", hl.dsp.window.close())
 
   hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })

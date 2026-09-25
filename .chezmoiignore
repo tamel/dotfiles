@@ -2,6 +2,7 @@
 {{- if eq .system.isGamingPC "false" }}
 .config/gtk-3.0/*
 .config/gtk-4.0/*
+.config/DankMaterialShell
 .config/hypr/*
 .config/input-remapper-2/*
 .config/kitty/*

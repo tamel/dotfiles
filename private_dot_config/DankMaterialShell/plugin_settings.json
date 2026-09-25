@@ -1,0 +1,27 @@
+{
+  "hyprlandSubmapIndicator": {
+    "enabled": true,
+    "fontSize": "large",
+    "submapLabels": [
+      {
+        "submap": "gaming",
+        "label": "",
+        "color": "#a6e3a1"
+      }
+    ],
+    "submapIcons": [
+      {
+        "submap": "gaming",
+        "icon": "stadia_controller",
+        "color": ""
+      }
+    ],
+    "clickToReset": false
+  },
+  "hyprSubmap": {
+    "enabled": true
+  },
+  "hyprlandSubmap": {
+    "enabled": true
+  }
+}
