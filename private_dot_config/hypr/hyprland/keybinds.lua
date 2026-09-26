@@ -11,19 +11,81 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + O", hl.dsp.layout("togglesplit"))
-hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
-hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
-hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
-hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
+-- only for dwindl
+-- hl.bind(mainMod .. " + O", hl.dsp.layout("togglesplit"))
+hl.bind(mainMod .. " + H", hl.dsp.layout("focus left"))
+hl.bind(mainMod .. " + L", hl.dsp.layout("focus right"))
+hl.bind(mainMod .. " + K", hl.dsp.layout("focus up"))
+hl.bind(mainMod .. " + J", hl.dsp.layout("focus down"))
 
+-- swap column left if not on workspace 9
+hl.bind(mainMod .. " + SHIFT + H", function()
+  local workspace = hl.get_active_workspace()
+  if workspace == nil or workspace.name == "9" then
+    return
+  end
+  hl.dispatch(hl.dsp.layout("swapcol l"))
+end)
+
+-- swap column right if not on workspace 9
+hl.bind(mainMod .. " + SHIFT + L", function()
+  local workspace = hl.get_active_workspace()
+  if workspace == nil or workspace.name == "9" then
+    return
+  end
+  hl.dispatch(hl.dsp.layout("swapcol r"))
+end)
+
+-- swap up
+hl.bind(mainMod .. " + SHIFT + K", function()
+  local workspace = hl.get_active_workspace()
+  if workspace == nil then
+    return
+  end
+
+  if workspace.name == "9" then
+    hl.dispatch(hl.dsp.layout("swapcol l"))
+  else
+    hl.dsp.window.move({ direction = "up" })
+  end
+end)
+
+-- swap down
+hl.bind(mainMod .. " + SHIFT + J", function()
+  local workspace = hl.get_active_workspace()
+  if workspace == nil then
+    return
+  end
+
+  if workspace.name == "9" then
+    hl.dispatch(hl.dsp.layout("swapcol r"))
+  else
+    hl.dsp.window.move({ direction = "down" })
+  end
+end)
+
+-- consume or expel
+hl.bind(mainMod .. " + Return", function()
+  local workspace = hl.get_active_workspace()
+  if workspace == nil or workspace.name == "9" then
+    return
+  end
+  hl.dispatch(hl.dsp.layout("consume_or_expel prev"))
+end)
+hl.bind(mainMod .. " + SHIFT + Return", function()
+  local workspace = hl.get_active_workspace()
+  if workspace == nil or workspace.name == "9" then
+    return
+  end
+  hl.dispatch(hl.dsp.layout("consume_or_expel next"))
+end)
+
+hl.bind(mainMod .. " + Z", hl.dsp.layout("center"))
+hl.bind(mainMod .. " + U", hl.dsp.layout("fit visible"))
 
 hl.bind(mainMod .. " + mouse:275", hl.dsp.window.close())
-hl.bind(mainMod .. " + mouse:274", hl.dsp.layout("togglesplit"))
+-- only for dwindle
+hl.bind(mainMod .. " + mouse:274", hl.dsp.layout("fit visible"))
 hl.bind(mainMod .. " + Left", hl.dsp.window.float())
 hl.bind(mainMod .. " + right", hl.dsp.window.pseudo())
 
@@ -42,17 +104,28 @@ end
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
-hl.bind("ALT + Control_L + 1", hl.dsp.workspace.move({ monitor = "DP-1" }))
-hl.bind("ALT + Control_L + 2", hl.dsp.workspace.move({ monitor = "DP-2" }))
 
 -- resizing
-hl.bind(mainMod .. " + Control_L + H", hl.dsp.window.resize({ x = -50, y = 0, relative = true }))
-hl.bind(mainMod .. " + Control_L + J", hl.dsp.window.resize({ x = 0, y = 50, relative = true }))
-hl.bind(mainMod .. " + Control_L + K", hl.dsp.window.resize({ x = 0, y = -50, relative = true }))
-hl.bind(mainMod .. " + Control_L + L", hl.dsp.window.resize({ x = 50, y = 0, relative = true }))
+hl.bind(mainMod .. " + CONTROL + H", function()
+  local workspace = hl.get_active_workspace()
+  if workspace == nil or workspace.name == "9" then
+    return
+  end
 
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "r-1" }))
-hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "r+1" }))
+  hl.dispatch(hl.dsp.layout("colresize -conf"))
+end)
+hl.bind(mainMod .. " + CONTROL + L", function()
+  local workspace = hl.get_active_workspace()
+  if workspace == nil or workspace.name == "9" then
+    return
+  end
+
+  hl.dispatch(hl.dsp.layout("colresize +conf"))
+end)
+
+hl.config({ binds = { scroll_event_delay = false } })
+hl.bind(mainMod .. " + mouse_down", hl.dsp.layout("move +300"))
+hl.bind(mainMod .. " + mouse_up", hl.dsp.layout("move -300"))
 
 -- resize binds
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })

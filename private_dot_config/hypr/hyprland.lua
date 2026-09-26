@@ -1,6 +1,3 @@
--- Programs / modifiers used throughout the config, see hyprland.d/vars.lua
-local vars = require("hyprland.vars")
-
 -- Catppuccin Mocha colors (see catppuccin-mocha.lua)
 local colors = require("catppuccin-mocha")
 
@@ -10,6 +7,7 @@ require("hyprland.workspaces")
 require("hyprland.windowrules")
 require("hyprland.autostart")
 require("hyprland.keybinds")
+require("hyprland.plugins")
 
 ------------------
 ---- ANIMATIONS ----
@@ -18,6 +16,7 @@ hl.curve("wind", { type = "bezier", points = { { 0.05, 0.9 }, { 0.1, 1.05 } } })
 hl.curve("winIn", { type = "bezier", points = { { 0.1, 1.1 }, { 0.1, 1.1 } } })
 hl.curve("winOut", { type = "bezier", points = { { 0.3, -0.3 }, { 0, 1 } } })
 hl.curve("liner", { type = "bezier", points = { { 1, 1 }, { 1, 1 } } })
+
 
 hl.config({ animations = { enabled = true } })
 
@@ -28,7 +27,7 @@ hl.animation({ leaf = "windowsMove", enabled = true, speed = 5, bezier = "wind",
 hl.animation({ leaf = "border", enabled = true, speed = 1, bezier = "liner" })
 hl.animation({ leaf = "borderangle", enabled = true, speed = 30, bezier = "liner", style = "loop" })
 hl.animation({ leaf = "fade", enabled = true, speed = 10, bezier = "default" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 5, bezier = "wind" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 5, bezier = "wind", style = "slidevert" })
 
 -----------------------
 ---- LOOK AND FEEL ----
@@ -43,7 +42,7 @@ hl.config({
     },
     gaps_in = 5,
     gaps_out = 20,
-    layout = "dwindle",
+    layout = "scrolling",
     resize_on_border = false,
   },
   decoration = {
@@ -68,6 +67,17 @@ hl.config({
   },
   master = {
     new_status = "master",
+  },
+  scrolling = {
+    fullscreen_on_one_column = false,
+    column_width = 0.5,
+    focus_fit_method = 1,
+    follow_focus = true,
+    follow_min_visible = 0.4,
+    explicit_column_widths = "0.333, 0.5, 0.667, 1.0",
+    wrap_focus = false,
+    wrap_swapcol = false,
+    direction = "right",
   },
   misc = {
     disable_hyprland_logo = false,
