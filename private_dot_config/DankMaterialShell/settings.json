@@ -26,6 +26,9 @@
   "appIdSubstitutions": [],
   "clockDateFormat": "dddd, MMMM d",
   "lockDateFormat": "dddd, MMMM d",
+  "spotlightSectionViewModes": {
+    "apps": "list"
+  },
   "useAutoLocation": true,
   "cursorSettings": {
     "theme": "catppuccin-mocha-mauve-cursors",
@@ -49,6 +52,9 @@
   "fontWeight": 700,
   "notificationSummaryFontSize": 18,
   "notificationBodyFontSize": 18,
+  "acLockTimeout": 300,
+  "acPostLockMonitorTimeout": 60,
+  "lockBeforeSuspend": true,
   "terminalsAlwaysDark": true,
   "muxType": "zellij",
   "showDock": true,
@@ -66,6 +72,16 @@
   "notificationCompactMode": true,
   "osdPowerProfileEnabled": true,
   "powerActionHoldDuration": 0.25,
+  "powerMenuActions": [
+    "reboot",
+    "logout",
+    "poweroff",
+    "lock",
+    "restart"
+  ],
+  "customPowerActionLogout": "tamelLogout",
+  "customPowerActionReboot": "tamelReboot",
+  "customPowerActionPowerOff": "tamelShutdown",
   "screenPreferences": {
     "wallpaper": [
       "all"
@@ -231,9 +247,11 @@
       "islandSatellitesEnabled": true,
       "islandSatelliteBackground": true,
       "islandSatelliteGothCorners": true,
-      "islandSatelliteSwoopRadius": 24,
+      "islandSatelliteSwoopRadius": 19,
       "islandSatellitePosition": "edges",
-      "islandInteractionMode": "click"
+      "islandInteractionMode": "click",
+      "islandHomeClockDisplay": "both",
+      "islandCornerRadius": 34
     },
     {
       "id": "bar1790353677496",
@@ -399,6 +417,11 @@
     },
     "dms_qr_generator": {
       "trigger": "qrg"
+    }
+  },
+  "launcherPluginVisibility": {
+    "dms_clipboard_search": {
+      "allowWithoutTrigger": true
     }
   },
   "configVersion": 18
