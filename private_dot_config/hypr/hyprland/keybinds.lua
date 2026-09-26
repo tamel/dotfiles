@@ -124,8 +124,8 @@ hl.bind(mainMod .. " + CONTROL + L", function()
 end)
 
 hl.config({ binds = { scroll_event_delay = false } })
-hl.bind(mainMod .. " + mouse_down", hl.dsp.layout("move +300"))
-hl.bind(mainMod .. " + mouse_up", hl.dsp.layout("move -300"))
+hl.bind(mainMod .. " + mouse_down", hl.dsp.layout("move -50"))
+hl.bind(mainMod .. " + mouse_up", hl.dsp.layout("move +50"))
 
 -- resize binds
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
