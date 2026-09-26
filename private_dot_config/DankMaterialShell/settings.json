@@ -67,6 +67,7 @@
   "dockLauncherLogoMode": "compositor",
   "dockTrashFileManager": "nautilus",
   "notificationForegroundLayers": false,
+  "lockPamExternallyManaged": true,
   "notificationCompactMode": true,
   "osdPowerProfileEnabled": true,
   "powerActionHoldDuration": 0.25,
