@@ -23,5 +23,9 @@
   },
   "hyprlandSubmap": {
     "enabled": true
+  },
+  "dankKDEConnect": {
+    "enabled": true,
+    "selectedDeviceId": "6559f5c5fa42403fa8574c6c66988946"
   }
 }

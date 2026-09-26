@@ -11,14 +11,12 @@
   "blurEnabled": true,
   "controlCenterShowMicPercent": true,
   "showWorkspaceIndex": true,
-  "showWorkspaceApps": true,
   "workspaceAppIconSizeOffset": 4,
   "groupActiveWorkspaceApps": true,
   "showOccupiedWorkspacesOnly": true,
   "reverseScrolling": true,
-  "workspaceColorMode": "tertiaryContainer",
-  "workspaceUnfocusedColorMode": "schh",
-  "workspaceFocusedBorderEnabled": true,
+  "workspaceOccupiedColorMode": "schh",
+  "workspaceUnfocusedColorMode": "s",
   "workspaceUnfocusedMonitorSeparateAppearance": true,
   "workspaceUnfocusedMonitorColorMode": "none",
   "waveProgressEnabled": false,
@@ -125,6 +123,24 @@
           "enabled": true
         },
         {
+          "id": "spacer",
+          "enabled": true,
+          "size": 5
+        },
+        {
+          "id": "runningApps",
+          "enabled": true,
+          "runningAppsCompactMode": true,
+          "runningAppsGroupByApp": false,
+          "runningAppsCurrentWorkspace": true,
+          "runningAppsCurrentMonitor": false
+        },
+        {
+          "id": "spacer",
+          "enabled": true,
+          "size": 5
+        },
+        {
           "id": "focusedWindow",
           "enabled": true,
           "focusedWindowCompactMode": false,
@@ -137,11 +153,43 @@
         "weather"
       ],
       "rightWidgets": [
+        {
+          "id": "privacyIndicator",
+          "enabled": true
+        },
         "systemTray",
+        {
+          "id": "separator",
+          "enabled": true
+        },
+        {
+          "id": "dankKDEConnect",
+          "enabled": true
+        },
+        {
+          "id": "spacer",
+          "enabled": true,
+          "size": 5
+        },
         "clipboard",
+        {
+          "id": "spacer",
+          "enabled": true,
+          "size": 5
+        },
+        "notificationButton",
+        {
+          "id": "spacer",
+          "enabled": true,
+          "size": 5
+        },
         "cpuUsage",
         "memUsage",
-        "notificationButton",
+        {
+          "id": "spacer",
+          "enabled": true,
+          "size": 20
+        },
         {
           "id": "controlCenterButton",
           "enabled": true,
@@ -214,12 +262,12 @@
           "enabled": true
         },
         {
-          "id": "notifications",
+          "id": "weather",
           "enabled": true
         },
         {
-          "id": "weather",
-          "enabled": false
+          "id": "notifications",
+          "enabled": true
         },
         {
           "id": "status",
@@ -358,7 +406,11 @@
         },
         {
           "id": "weather",
-          "enabled": false
+          "enabled": true
+        },
+        {
+          "id": "notifications",
+          "enabled": true
         },
         {
           "id": "status",
@@ -371,10 +423,6 @@
         {
           "id": "brightness",
           "enabled": false
-        },
-        {
-          "id": "notifications",
-          "enabled": true
         }
       ]
     }
