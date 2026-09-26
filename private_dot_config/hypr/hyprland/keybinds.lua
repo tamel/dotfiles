@@ -83,6 +83,10 @@ end)
 hl.bind(mainMod .. " + Z", hl.dsp.layout("center"))
 hl.bind(mainMod .. " + U", hl.dsp.layout("fit visible"))
 
+
+hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("dms ipc call spotlight toggle"),
+  { description = "Default Launcher: Toggle" })
+
 hl.bind(mainMod .. " + mouse:275", hl.dsp.window.close())
 -- only for dwindle
 hl.bind(mainMod .. " + mouse:274", hl.dsp.layout("fit visible"))
@@ -164,6 +168,8 @@ hl.define_submap("gaming", function()
   hl.bind("SUPER + SHIFT + 8", hl.dsp.window.move({ workspace = 8 }))
   hl.bind("SUPER + SHIFT + 9", hl.dsp.window.move({ workspace = 9 }))
   hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
+
+  hl.bind("ALT + space", hl.dsp.exec_cmd("dms ipc call spotlight toggle"), { description = "Default Launcher: Toggle" })
 
   -- hl.bind("ALT + Space", hl.dsp.exec_cmd("rofi -show drun"))
   -- hl.bind("ALT + Tab", hl.dsp.exec_cmd("rofi -show window"))
