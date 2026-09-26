@@ -1,9 +1,8 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  branch = "master",
+  branch = "main",
   lazy = false,
   build = ":TSUpdate",
-  main = "nvim-treesitter.configs",
   opts = {
     highlight = {
       enable = true,
@@ -13,8 +12,22 @@ return {
     autotag = {
       enable = true,
     },
-    -- ensure these languages parsers are installed
-    ensure_installed = {
+    incremental_selection = {
+      enable = true,
+      keymaps = {
+        init_selection = "<C-space>",
+        node_incremental = "<C-space>",
+        scope_incremental = false,
+        node_decremental = "<bs>",
+      },
+    },
+  },
+  config = function(opts)
+    local nvimTreesitter = require('nvim-treesitter')
+
+    nvimTreesitter.setup(opts)
+
+    nvimTreesitter.install({
       -- utility
       "awk",
       "bash",
@@ -61,15 +74,6 @@ return {
       "git_rebase",
       "gitignore",
       "gitcommit",
-    },
-    incremental_selection = {
-      enable = true,
-      keymaps = {
-        init_selection = "<C-space>",
-        node_incremental = "<C-space>",
-        scope_incremental = false,
-        node_decremental = "<bs>",
-      },
-    },
-  },
+    })
+  end,
 }
