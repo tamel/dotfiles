@@ -12,3 +12,6 @@ hl.window_rule({ match = { title = "(Vivaldi Settings:.*)" }, tile = true })
 
 -- DMS-RULE: id=wr_1790369379430460193, name=Tile Path of Building
 hl.window_rule({ match = { title = "(.*Path of Building)" }, tile = true })
+
+-- DMS-RULE: id=wr_1790515020822935041, name=hide xembedsniproxy
+hl.window_rule({ match = { class = "xembedsniproxy" }, no_focus = true, workspace = "special:hidden silent" })
