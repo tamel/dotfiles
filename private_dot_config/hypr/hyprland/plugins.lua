@@ -43,7 +43,7 @@ if hl.plugin.gloview ~= nil then
 
   hl.bind(mainMod .. " + O",
     function()
-      hl.dispatch(hl.dsp.cursor.move_to_corner({ corner = 0 }))
+      hl.dispatch(hl.dsp.cursor.move({ x = 0, y = 0 }))
       hl.dispatch(hl.plugin.gloview.toggle)
     end)
 end
