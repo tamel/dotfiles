@@ -80,8 +80,9 @@ hl.config({
     direction = "right",
   },
   misc = {
-    disable_hyprland_logo = false,
-    force_default_wallpaper = -1,
+    disable_hyprland_logo = true,
+    force_default_wallpaper = 0,
+    disable_splash_rendering = true,
   },
   input = {
     follow_mouse = 1,

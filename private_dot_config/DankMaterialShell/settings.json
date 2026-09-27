@@ -24,6 +24,8 @@
   "appIdSubstitutions": [],
   "clockDateFormat": "dddd, MMMM d",
   "lockDateFormat": "dddd, MMMM d",
+  "greeterFontFamily": "Fira Code",
+  "greeterPamExternallyManaged": true,
   "spotlightSectionViewModes": {
     "apps": "list"
   },
