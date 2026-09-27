@@ -187,6 +187,5 @@ hl.define_submap("gaming", function()
   end)
 
   hl.bind("SUPER + F", hl.dsp.window.fullscreen())
-  hl.bind("SUPER + P", hl.dsp.window.pseudo())
 end)
 -- end submap

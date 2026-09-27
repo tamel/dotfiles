@@ -58,13 +58,11 @@
   "terminalsAlwaysDark": true,
   "muxType": "zellij",
   "showDock": true,
-  "dockAutoHide": true,
   "dockGroupByApp": true,
-  "dockPosition": 2,
-  "dockIndicatorStyle": "line",
+  "dockMargin": 5,
   "dockBorderEnabled": true,
-  "dockBorderColor": "primary",
-  "dockBorderThickness": 2,
+  "dockBorderColor": "secondary",
+  "dockIsolateDisplays": true,
   "dockLauncherEnabled": true,
   "dockLauncherLogoMode": "compositor",
   "dockTrashFileManager": "nautilus",
@@ -88,10 +86,7 @@
       "all"
     ],
     "dock": [
-      {
-        "name": "DP-1",
-        "model": "LC34G55T"
-      }
+      "all"
     ],
     "lockScreen": [
       {
