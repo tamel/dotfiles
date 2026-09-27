@@ -1,0 +1,35 @@
+[main-monitor]
+# Shell commands to execute when hotcorner is triggered,
+# at least one is required.
+
+# Command to run when cursor enters hotcorner.
+# `command` is an alias for `enter_command`.
+enter_command = ["hyprctl", "eval", 'dofile(os.getenv("HOME") .. "/.config/waycorner/openGloview.lua")']
+# Command to run when cursor exits hotcorner.
+# exit_command = ["notify-send", "exit"]
+
+# Locations of the hot corners.
+# Options:
+# - for corners: top_left, top_right, bottom_right, and bottom_left;
+# - for edges: top, bottom, right, left.
+locations = ["bottom_left"]
+
+# Size of the hot corners in pixels, for edges the size means the width
+# for vertical edges, and height for horizontal edges. The other dimension
+# will be the width/height of your display - the set margin.
+size = 20
+
+# Margin on the sides of the hot edges, only applicable to edge locations.
+# See the comment with sizes attribute above.
+margin = 20
+
+# Timeout in milliseconds before command is triggered.
+timeout_ms = 250
+
+# Hex color of the corner when previewed, supports transparency. (#AARRGGBB or #RRGGBB)
+# (Useful for debugging purposes when setting up several hot corners.)
+# --preview
+color = "#FF0000"  # default
+
+[main-monitor.output]
+description = "DP-1"

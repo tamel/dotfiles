@@ -8,6 +8,7 @@
 .config/kitty/*
 .config/polychromatic/*
 .config/waybar/*
+.config/waycorner/*
 .config/wlogout/*
 
 .local/share/icons/*
