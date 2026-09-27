@@ -37,6 +37,15 @@ hl.window_rule({
   match = { class = ".*" },
 })
 
+hl.window_rule({
+  match = {
+    class = "^(xembedsniproxy)$", xwayland = true },
+  no_focus = true,
+  pin = true,
+  opacity = 0.0,
+  move = { 0, 0 }
+})
+
 -- force tiling for certain apps
 
 -- default
