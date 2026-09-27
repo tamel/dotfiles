@@ -21,7 +21,7 @@ if hl.plugin.gloview ~= nil then
         hover_border = colors.mauve,
 
         scroll_switches_workspace = 0,
-        focus_follows_mouse = 0,
+        focus_follows_mouse = 1,
         exit_on_click = 0,
 
         passthrough_keys = 0,

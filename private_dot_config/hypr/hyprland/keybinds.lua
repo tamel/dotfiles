@@ -139,6 +139,7 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- gaming
 hl.bind("SUPER + G", function()
+  hl.dispatch(hl.dsp.exec_cmd("pkill waycorner"))
   hl.dispatch(hl.dsp.exec_cmd("activateGamingEffects"))
   -- hl.dispatch(hl.dsp.exec_cmd("switch_wallpaper -k"))
   hl.dispatch(hl.dsp.submap("gaming"))
@@ -179,6 +180,7 @@ hl.define_submap("gaming", function()
   hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
   hl.bind("SUPER + G", function()
+    hl.dispatch(hl.dsp.exec_cmd("waycorner"))
     hl.dispatch(hl.dsp.exec_cmd("activateBaseEffects"))
     -- hl.dispatch(hl.dsp.exec_cmd("switch_wallpaper -r"))
     hl.dispatch(hl.dsp.submap("reset"))
