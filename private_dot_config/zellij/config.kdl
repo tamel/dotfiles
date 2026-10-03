@@ -1,17 +1,17 @@
 theme "catppuccin-mocha"
+pane_frames false
 
 show_startup_tips false
 
 default_shell "fish"
 
 plugins {
-  autolock location="https://github.com/fresh2dev/zellij-autolock/releases/download/0.2.2/zellij-autolock.wasm" {
-    triggers "nvim|fzf|zoxide"
-  }
+  vim-zellij-navigator location="file:~/.config/zellij/plugins/vim-zellij-navigator.wasm"
+  zjstatus location="file:~/.config/zellij/plugins/zjstatus.wasm"
 }
 
 load_plugins {
-  autolock
+  vim-zellij-navigator
 }
 
 keybinds clear-defaults=true {
@@ -21,10 +21,32 @@ keybinds clear-defaults=true {
 
   normal {
     bind "Ctrl a" {SwitchToMode "locked"; }
-    bind "Ctrl h" { MoveFocus "Left"; }
-    bind "Ctrl j" { MoveFocus "Down"; }
-    bind "Ctrl k" { MoveFocus "Up"; }
-    bind "Ctrl l" { MoveFocus "Right"; }
+    bind "Ctrl h" {
+      MessagePlugin "vim-zellij-navigator" {
+        name "move_focus";
+        payload "left"
+        move_mod "ctrl";
+        use_arrow_keys "false";
+      };
+    }
+    bind "Ctrl j" { MessagePlugin "vim-zellij-navigator" {
+        name "move_focus";
+        payload "down"
+        move_mod "ctrl";
+        use_arrow_keys "false";
+      }; }
+    bind "Ctrl k" { MessagePlugin "vim-zellij-navigator" {
+        name "move_focus";
+        payload "up"
+        move_mod "ctrl";
+        use_arrow_keys "false";
+      }; }
+    bind "Ctrl l" { MessagePlugin "vim-zellij-navigator" {
+        name "move_focus";
+        payload "right"
+        move_mod "ctrl";
+        use_arrow_keys "false";
+      }; }
     bind "Ctrl p" { SwitchToMode "pane"; }
     bind "Ctrl o" { SwitchToMode "tab"; }
     bind "Ctrl u" { SwitchToMode "session"; }
@@ -69,7 +91,6 @@ keybinds clear-defaults=true {
     bind "m" { ToggleFocusFullscreen; SwitchToMode "normal"; }
     bind "x" { CloseFocus; }
     bind "/" { SwitchToMode "entersearch"; }
-    bind "z" { TogglePaneFrames; }
 
     bind "h" { MoveFocus "Left"; }
     bind "j" { MoveFocus "Down"; }
