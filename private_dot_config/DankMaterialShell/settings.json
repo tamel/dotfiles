@@ -197,7 +197,20 @@
           "showBrightnessIcon": false,
           "showBrightnessPercent": false,
           "showIdleInhibitorIcon": true,
-          "showDoNotDisturbIcon": true
+          "showDoNotDisturbIcon": true,
+          "controlCenterGroupOrder": [
+            "idleInhibitor",
+            "doNotDisturb",
+            "screenSharing",
+            "network",
+            "bluetooth",
+            "vpn",
+            "audio",
+            "microphone",
+            "brightness",
+            "battery",
+            "printer"
+          ]
         }
       ],
       "spacing": 4,
@@ -451,6 +464,28 @@
     "hslLightness": 1,
     "valid": true
   },
+  "desktopWidgetInstances": [
+    {
+      "id": "dw_1790690646801_nhf6q3qez",
+      "widgetType": "modernClock",
+      "name": "Modern Clock",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          {
+            "name": "DP-2",
+            "model": "LG ULTRAGEAR"
+          }
+        ],
+        "dayFontFamily": "",
+        "use24Hour": true,
+        "showSeconds": false,
+        "uppercase": true,
+        "scaleWithWidget": false,
+        "showOnOverlay": false
+      }
+    }
+  ],
   "builtInPluginSettings": {
     "dms_settings_search": {
       "trigger": "?"
