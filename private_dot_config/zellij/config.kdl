@@ -1,9 +1,8 @@
 theme "catppuccin-mocha"
 pane_frames false
-
 show_startup_tips false
-
 default_shell "fish"
+default_layout "catppuccin"
 
 plugins {
   vim-zellij-navigator location="file:~/.config/zellij/plugins/vim-zellij-navigator.wasm"
