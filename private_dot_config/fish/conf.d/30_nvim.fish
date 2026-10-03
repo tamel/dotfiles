@@ -1,4 +1,4 @@
-function setup_nvim
+status is-interactive; and begin
     if command -q nvim
         source $HOME/.config/fish/conf.d/nvim/session_vars.fish
     else if test -x /opt/nvim-linux-x86_64/bin/nvim

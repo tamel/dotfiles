@@ -1,4 +1,4 @@
-function setup_fzf
+status is-interactive; and begin
     if command -q fzf
         source $HOME/.config/fish/conf.d/fzf/session_vars.fish
 

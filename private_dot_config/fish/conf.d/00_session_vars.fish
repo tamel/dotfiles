@@ -1,4 +1,4 @@
-function setup_session_vars
+status is-interactive; and begin
 
     if set -q __FISH_SESSION_VARS_SOURCED
         return
@@ -6,7 +6,7 @@ function setup_session_vars
 
     set -gx __FISH_SESSION_VARS_SOURCED 1
 
-    set -gx NH_FLAKE '{{ .chezmoi.homeDir }}/.nix-cfg'
+    set -gx NH_FLAKE '/home/tamel/.nix-cfg'
 
     # set xdg config dirs
     set -gx XDG_DESKTOP_DIR /home/tamel/Desktop

@@ -1,4 +1,4 @@
-function setup_starship
+status is-interactive; and begin
     if command -q starship
         if test "$TERM" != dumb
             source $HOME/.config/fish/conf.d/starship/session_vars.fish

@@ -2,7 +2,7 @@ function insert_jj
     commandline -i jj
 end
 
-function setup_vim-key-binds
+status is-interactive; and begin
     fish_vi_key_bindings
     bind -M insert -m default jk backward-char force-repaint
 
