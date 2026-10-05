@@ -26,8 +26,4 @@ return {
       },
     },
   },
-  config = function(opts)
-    require("tiny-inline-diagnostic").setup(opts)
-    vim.diagnostic.config({ virtual_text = false }) -- Disable default virtual text
-  end,
 }
