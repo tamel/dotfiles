@@ -19,7 +19,8 @@ keybinds clear-defaults=true {
   }
 
   normal {
-    bind "Ctrl a" {SwitchToMode "locked"; }
+    bind "Ctrl a" {SwitchToMode "tmux"; }
+
     bind "Ctrl h" {
       MessagePlugin "vim-zellij-navigator" {
         name "move_focus";
@@ -45,10 +46,35 @@ keybinds clear-defaults=true {
         payload "right"
         move_mod "ctrl";
         use_arrow_keys "false";
-      }; }
+      };
+    }
+  }
+
+  tmux {
+    bind "Ctrl a" { SwitchToMode "normal"; }
+    bind "Ctrl l" { SwitchToMode "locked"; }
+    bind "p" { SwitchToMode "pane"; }
+    bind "o" { SwitchToMode "tab"; }
+    bind "u" { SwitchToMode "session"; }
+    // allow also with Ctrl to allow sloppy input
     bind "Ctrl p" { SwitchToMode "pane"; }
     bind "Ctrl o" { SwitchToMode "tab"; }
     bind "Ctrl u" { SwitchToMode "session"; }
+
+    bind "h" { MoveFocus "Left"; }
+    bind "j" { MoveFocus "Down"; }
+    bind "k" { MoveFocus "Up"; }
+    bind "l" { MoveFocus "Right"; }
+
+    bind "1" { GoToTab 1; SwitchToMode "normal"; }
+    bind "2" { GoToTab 2; SwitchToMode "normal"; }
+    bind "3" { GoToTab 3; SwitchToMode "normal"; }
+    bind "4" { GoToTab 4; SwitchToMode "normal"; }
+    bind "5" { GoToTab 5; SwitchToMode "normal"; }
+    bind "6" { GoToTab 6; SwitchToMode "normal"; }
+    bind "7" { GoToTab 7; SwitchToMode "normal"; }
+    bind "8" { GoToTab 8; SwitchToMode "normal"; }
+    bind "9" { GoToTab 9; SwitchToMode "normal"; }
   }
 
   session {
@@ -60,22 +86,13 @@ keybinds clear-defaults=true {
 
   tab {
     bind "n" { NewTab; SwitchToMode "normal"; }
-    bind "x" { CloseTab; SwitchToMode "normal"; }
+    bind "x" { CloseTab; }
     bind "r" { SwitchToMode "renametab"; }
     bind "l" { GoToNextTab; }
     bind "h" { GoToPreviousTab; }
     bind "b" { BreakPane; SwitchToMode "normal"; }
     bind "Shift h" { MoveTab "Left"; }
     bind "Shift l" { MoveTab "Right"; }
-    bind "1" { GoToTab 1; SwitchToMode "normal"; }
-    bind "2" { GoToTab 2; SwitchToMode "normal"; }
-    bind "3" { GoToTab 3; SwitchToMode "normal"; }
-    bind "4" { GoToTab 4; SwitchToMode "normal"; }
-    bind "5" { GoToTab 5; SwitchToMode "normal"; }
-    bind "6" { GoToTab 6; SwitchToMode "normal"; }
-    bind "7" { GoToTab 7; SwitchToMode "normal"; }
-    bind "8" { GoToTab 8; SwitchToMode "normal"; }
-    bind "9" { GoToTab 9; SwitchToMode "normal"; }
   }
 
   pane {
@@ -136,7 +153,7 @@ keybinds clear-defaults=true {
     bind "Enter" { SwitchToMode "normal"; }
   }
 
-  shared_except "normal" "locked" "renametab" "renamepane" "entersearch" {
+  shared_except "normal" "locked" "tmux" "renametab" "renamepane" "entersearch" {
     bind "q" { SwitchToMode "normal"; }
   }
 }
