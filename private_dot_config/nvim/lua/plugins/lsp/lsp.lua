@@ -20,7 +20,7 @@ return {
         keymap.set("n", "<leader>lrn", vim.lsp.buf.rename, opts) -- smart rename
 
         opts.desc = "LSP: Restart LSP"
-        keymap.set("n", "<leader>lrs", "<cmd>LspRestart<CR>", opts) -- restart lsp
+        keymap.set("n", "<leader>lrs", "<cmd>lsp restart<CR>", opts) -- restart lsp
 
         opts.desc = "LSP: Go to declaration"
         keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
