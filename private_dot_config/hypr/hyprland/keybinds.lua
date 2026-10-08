@@ -97,6 +97,8 @@ hl.bind(mainMod .. " + right", hl.dsp.window.pseudo())
 -- special binds
 hl.bind("SUPER + N", hl.dsp.exec_cmd("activateBaseEffects"))
 hl.bind("SUPER + O", hl.dsp.exec_cmd("activateDarkEffects"))
+hl.bind("SUPER + K", hl.dsp.exec_cmd("switch_wallpaper -k"))
+hl.bind("SUPER + W", hl.dsp.exec_cmd("choose_wallpaper"))
 
 -- modifying workspaces
 for i = 1, 10 do
@@ -141,7 +143,7 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 hl.bind("SUPER + G", function()
   hl.dispatch(hl.dsp.exec_cmd("pkill waycorner"))
   hl.dispatch(hl.dsp.exec_cmd("activateGamingEffects"))
-  -- hl.dispatch(hl.dsp.exec_cmd("switch_wallpaper -k"))
+  hl.dispatch(hl.dsp.exec_cmd("switch_wallpaper -k"))
   hl.dispatch(hl.dsp.submap("gaming"))
 end)
 
@@ -182,7 +184,7 @@ hl.define_submap("gaming", function()
   hl.bind("SUPER + G", function()
     hl.dispatch(hl.dsp.exec_cmd("waycorner"))
     hl.dispatch(hl.dsp.exec_cmd("activateBaseEffects"))
-    -- hl.dispatch(hl.dsp.exec_cmd("switch_wallpaper -r"))
+    hl.dispatch(hl.dsp.exec_cmd("switch_wallpaper -r"))
     hl.dispatch(hl.dsp.submap("reset"))
   end)
 
