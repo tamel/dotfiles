@@ -97,9 +97,10 @@ keybinds clear-defaults=true {
 
   pane {
     bind "n" { NewPane; SwitchToMode "normal"; }
+    bind "+" { NewPane; }
     bind "r" { SwitchToMode "renamepane"; }
-    bind "ä" { NextSwapLayout; }
-    bind "ö" { PreviousSwapLayout; }
+    bind "i" { NextSwapLayout; }
+    bind "u" { PreviousSwapLayout; }
     bind "c" { SwitchToMode "resize"; }
     bind "s" { SwitchToMode "scroll"; }
     bind "f" { ToggleFloatingPanes; SwitchToMode "normal"; }
