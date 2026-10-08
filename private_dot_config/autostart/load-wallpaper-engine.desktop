@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=load wallpaper engine
+Exec=switch_wallpaper -r
