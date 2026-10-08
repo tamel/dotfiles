@@ -144,7 +144,9 @@ hl.bind("SUPER + G", function()
   hl.dispatch(hl.dsp.exec_cmd("pkill waycorner"))
   hl.dispatch(hl.dsp.exec_cmd("activateGamingEffects"))
   hl.dispatch(hl.dsp.exec_cmd("switch_wallpaper -k"))
+  hl.dispatch(hl.dsp.exec_cmd("dms ipc call notifications enableDoNotDisturbUntilTomorrowMorning"))
   hl.dispatch(hl.dsp.submap("gaming"))
+  hl.dispatch(hl.dsp.exec_cmd("dms ipc call inhibit enable"))
 end)
 
 -- begin submap
@@ -185,6 +187,8 @@ hl.define_submap("gaming", function()
     hl.dispatch(hl.dsp.exec_cmd("waycorner"))
     hl.dispatch(hl.dsp.exec_cmd("activateBaseEffects"))
     hl.dispatch(hl.dsp.exec_cmd("switch_wallpaper -r"))
+    hl.dispatch(hl.dsp.exec_cmd("dms ipc call notifications toggleDoNotDisturb"))
+    hl.dispatch(hl.dsp.exec_cmd("dms ipc call inhibit disable"))
     hl.dispatch(hl.dsp.submap("reset"))
   end)
 
