@@ -105,6 +105,7 @@ keybinds clear-defaults=true {
     bind "s" { SwitchToMode "scroll"; }
     bind "f" { ToggleFloatingPanes; SwitchToMode "normal"; }
     bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "normal"; }
+    bind "Shift e" { TogglePaneEmbedOrFloating; ToggleFloatingPanes; }
     bind "m" { ToggleFocusFullscreen; SwitchToMode "normal"; }
     bind "x" { CloseFocus; }
     bind "/" { SwitchToMode "entersearch"; }
