@@ -85,6 +85,7 @@ keybinds clear-defaults=true {
   }
 
   tab {
+    bind "Enter" { SwitchToMode "pane"; }
     bind "n" { NewTab; SwitchToMode "normal"; }
     bind "x" { CloseTab; }
     bind "r" { SwitchToMode "renametab"; }
@@ -96,17 +97,20 @@ keybinds clear-defaults=true {
   }
 
   pane {
+    bind "Enter" { SwitchToMode "tab"; }
     bind "n" { NewPane; SwitchToMode "normal"; }
-    bind "+" { NewPane; }
+    bind "Shift n" { NewPane; }
     bind "r" { SwitchToMode "renamepane"; }
     bind "i" { NextSwapLayout; }
     bind "u" { PreviousSwapLayout; }
     bind "c" { SwitchToMode "resize"; }
     bind "s" { SwitchToMode "scroll"; }
     bind "f" { ToggleFloatingPanes; SwitchToMode "normal"; }
+    bind "Shift f" { ToggleFloatingPanes; }
     bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "normal"; }
     bind "Shift e" { TogglePaneEmbedOrFloating; ToggleFloatingPanes; }
     bind "m" { ToggleFocusFullscreen; SwitchToMode "normal"; }
+    bind "Shift m" { ToggleFocusFullscreen; }
     bind "x" { CloseFocus; }
     bind "/" { SwitchToMode "entersearch"; }
 
