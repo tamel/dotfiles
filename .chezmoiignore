@@ -1,5 +1,6 @@
 # ignore desktop entries. This comes in handy especially for systems without UI (e.g. WSL)
 {{- if eq .system.isGamingPC "false" }}
+.config/autostart/*
 .config/gtk-3.0/*
 .config/gtk-4.0/*
 .config/DankMaterialShell
