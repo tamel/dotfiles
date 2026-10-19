@@ -9,3 +9,6 @@ hl.window_rule({ match = { title = "(Battle.net - Chats and Groups)" }, tile = t
 
 -- DMS-RULE: id=wr_1790369379430460193, name=Tile Path of Building
 hl.window_rule({ match = { title = "(.*Path of Building)" }, tile = true })
+
+-- DMS-RULE: id=wr_1791735358351897075, name=Slay the Spire
+hl.window_rule({ match = { class = "^Slay the Spire$" }, fullscreen = true })
