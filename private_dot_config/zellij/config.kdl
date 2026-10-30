@@ -1,5 +1,6 @@
 theme "catppuccin-mocha"
-pane_frames false
+pane_frames true
+pane_frame_style "full"
 show_startup_tips false
 default_shell "fish"
 default_layout "catppuccin"
