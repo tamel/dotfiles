@@ -1,4 +1,4 @@
--- DMS Window Rules — managed by DankMaterialShell
+-- DMS Window Rules — managed by Dux Shell
 -- Do not edit manually; changes may be overwritten
 
 -- DMS-RULE: id=wr_1790368787848174223, name=Tile Battle.net
@@ -12,3 +12,6 @@ hl.window_rule({ match = { title = "(.*Path of Building)" }, tile = true })
 
 -- DMS-RULE: id=wr_1791735358351897075, name=Slay the Spire
 hl.window_rule({ match = { class = "^Slay the Spire$" }, fullscreen = true })
+
+-- DMS-RULE: id=dms-window-opaque, name=DMS Window Opaque
+hl.window_rule({ match = { class = "^(dev\\.duxlabs\\.shell|com\\.danklinux\\.dms)$" }, opaque = true })
