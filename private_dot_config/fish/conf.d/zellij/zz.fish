@@ -5,15 +5,27 @@ function zz
         return 1
     end
 
+    function createNamedZellijSession
+        read -p 'echo "Enter session name: "' -l name
+        or return 130
+        if test -z "$name"
+            zellij
+        else
+            zellij -s $name
+        end
+        return $status
+    end
+
     function checkCreateZellijSession
         while true
-            read -p 'echo "No zellij session found, create [N]ew session or [Q]uit? (n/Q):"' -l confirm
-            switch $confirm
+            read -p 'echo "No zellij session found, create [N]ew session or [Q]uit? (n/Q):"' -l -n 1 selection
+            or return 130
+            switch $selection
                 case N n
-                    zellij
-                    break
+                    createNamedZellijSession
+                    return $status
                 case '' Q q
-                    break
+                    return 0
                 case '*'
                     echo "Unexpected selection!"
             end
@@ -22,16 +34,19 @@ function zz
 
     function createOrAttachZellijSession
         while true
-            read -p 'echo "Create [N]ew session, [A]ttach to existing, or [Q]uit? (n/a/Q):"' -l confirm
-            switch $confirm
+            read -p 'echo "Create [N]ew session, [A]ttach to existing, or [Q]uit? (n/a/Q):"' -l -n 1 selection
+            or return 130
+            switch $selection
                 case N n
-                    zellij
-                    break
+                    createNamedZellijSession
+                    return $status
                 case A a
-                    zellij attach $(zellij ls --short | fzf -1)
-                    break
+                    set -l target (zellij ls --short | fzf -1)
+                    or return $status
+                    zellij attach $target
+                    return $status
                 case '' Q q
-                    break
+                    return 0
                 case '*'
                     echo "Unexpected selection!"
             end
@@ -45,4 +60,5 @@ function zz
         echo
         createOrAttachZellijSession
     end
+    return $status
 end
